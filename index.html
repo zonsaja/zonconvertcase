@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="js" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Convert Case: Convert upper case to lower case, lower case to upper case and more! | zonConvertCase</title>
+	<meta name="description" content="Easily convert text between different cases: lower case, UPPER CASE, Sentence case, Capitalized Case, aLtErNaTiNg cAsE and more.">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="img/zonconvertcase.ico" />
+	<link rel="icon" type="image/ico" href="img/zonconvertcase.ico">
+	<link rel="stylesheet" href="css/zonconvertcase.css">
+	<style>
+		.contentarea {
+			visibility: visible;
+		}
+
+		.actions,
+		.messages {
+			text-align: center;
+		}
+
+		.actions .btn {
+			min-width: 150px;
+		}
+
+		textarea,
+		button {
+			border-radius: 3px;
+		}
+
+		.message.info {
+			border-top-color: #0080ff;
+			background: #ddddff;
+		}
+
+		.message.success {
+			border-top-color: #008800;
+			background: #ddffbb;
+		}
+
+		.message.error,
+		.message.upgrade {
+			border-top-color: #ff0000;
+			background: #ffcccc;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!--[if lte IE 8]><div class="message upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</div><![endif]-->
+		<div class="nojs message upgrade">JavaScript is required to use this web site. Please turn it on in your browser or whitelist this site, then refresh the page.</div>
+		<div id="container">
+			<div class="row contentarea">
+				<form action="/" method="post">
+					<textarea id="content" placeholder="Type or paste your content here"></textarea>
+				</form>
+			</div>
+			<div class="actions">
+				<div class="edit">
+					<button id="sentence" class="btn">Sentence case</button>
+					<button id="lower" class="btn">lower case</button>
+					<button id="upper" class="btn">UPPER CASE</button>
+					<button id="capitalized" class="btn">Capitalized Case</button>
+					<button id="alternating" class="btn">aLtErNaTiNg cAsE</button>
+					<button id="title" class="btn">Title Case</button>
+					<button id="inverse" class="btn">InVeRsE CaSe</button>
+				</div>
+				<div class="row counts">Character(s): <span class="char_count">0</span> | Word(s): <span class="word_count">0</span></div>
+				<div class="save">
+					<button id="download" class="btn" style="display: inline-block;">Download Text</button>
+					<button id="copy" class="btn" data-clipboard-target="#content">Copy to Clipboard</button>
+				</div>
+			</div>
+			<div class="messages"></div>
+		</div>
+	</div>
+	<script src="jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><\/script>')
+	</script>
+	<script>
+		var copied = "Text copied to clipboard!",
+			manual_copy = "Press Ctrl+C to copy text",
+			downloaded = "Text downloaded!",
+			no_text = "Please enter some text first!",
+			file_name = "zonconvertcase.txt"
+	</script>
+	<script src="js/zonconvertcase.js"></script>
+</body>
+
+</html>
